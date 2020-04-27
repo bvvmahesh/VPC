@@ -16,4 +16,4 @@ nonprod: ## Apply Module in NonProd Environement
 	@cd prod
 	@terraform init
 	@terraform workspace new nonprod || terraform workspace select nonprod
-	@terraform apply -auto-approve
+	@terraform apply -auto-approve -var-file=vars.tf
