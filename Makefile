@@ -12,6 +12,6 @@ prod: ## Apply Module in Prod Environement
     @terraform apply -auto-approve
 
 nonprod: ## Apply Module in NonProd Environement
-    @terraform workspace new prod || terraform workspace select prod
     @terraform init
+    @terraform workspace new prod || terraform workspace select prod
     @terraform apply -auto-approve
