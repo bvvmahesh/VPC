@@ -3,6 +3,6 @@ resource "aws_subnet" "main" {
   vpc_id        = aws_vpc.main.id
   cidr_block    =  cidrsubnet("10.100.0.0/16", 8, count.index)
   tags          = {
-    Name        = "${var.TAGS["ENV"]}-subnet-${count.index}"
+    Name        = "${var.TAGS["ENV"]}-subnet-${var.COUNT}"
   }
 }
