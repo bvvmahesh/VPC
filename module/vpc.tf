@@ -3,5 +3,4 @@ resource "aws_vpc" "main" {
   tags = {
     Name = var.TAGS["ENV"]
   }
-  //tags       = var.TAGS["ENV"]
 }
